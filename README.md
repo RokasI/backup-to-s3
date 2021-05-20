@@ -2,9 +2,9 @@
 Python script to zip file/folder, encrypt it and send to S3 for storage
 
 # Requirements
-pip install awscli
-pip install boto3
-pip install cryptography
+    pip install awscli
+    pip install boto3
+    pip install cryptography
 
 Configured AWS profile with access key, secret key and region where your bucket resides
 Example:
