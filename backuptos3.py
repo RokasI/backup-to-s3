@@ -85,6 +85,7 @@ existing_backups = list(object.key for object in my_bucket.objects.all()
 # Enforce max backups and delete oldest if there will be too many after the new backup
 oldest_to_newest_backup_by_name = list(sorted(existing_backups))
 while len(oldest_to_newest_backup_by_name) >= MAX_BACKUP_AMOUNT:  
+    backup_to_delete = existing_backups.pop(0)
     s3.Object(bucket_name, backup_to_delete).delete()
     existing_backups = list(object.key for object in my_bucket.objects.all()
             if object.key.startswith('backup-') and object.key.endswith('.zip'))
