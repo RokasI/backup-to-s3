@@ -11,10 +11,10 @@ Configured AWS profile with access key, secret key and region where your bucket 
 # Running an Encrypted Backup:
 Please make sure to run `backuptos3.py --help` to get the most up-to-date instructions on how the command-line parameters work.
 # Parameters:
-    `-a`  Max amount of backups stored on s3. Default value is 5 if limit is exceeded, oldest backup will be deleted.
-    `-o`  File or directorory location to be beacked up.
+    `-a`  Max amount of backups stored on s3. Default value is 5. If limit is exceeded, oldest backup will be deleted.
+    `-o`  File or directorory location to be backed up.
     `-b`  S3 bucket name you want to store backups in.
-    `-ck` Specify location to create encryption key. It will be stored there for decryption.
+    `-ck` Specify location to create encryption key. It will be stored there for encryption/decryption.
     `-k`  Encryption key location if you already created one.
     `-db` Temporary directory to store backed up files before sending to S3. Default is /tmp/
 
