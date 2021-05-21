@@ -1,12 +1,12 @@
 # backup-to-s3
-Python script to zip file/folder, encrypt it and send to S3 for storage
+Python script to zip file/folder on EC2, encrypt it and send to S3 for storage
 
 # Requirements
     pip install awscli
     pip install boto3
     pip install cryptography
 
-Configured AWS profile with access key, secret key and region where your bucket resides
+Configured AWS profile with access key, secret key and region where your bucket resides 
 
 # Running an Encrypted Backup:
 Please make sure to run `backuptos3.py --help` to get the most up-to-date instructions on how the command-line parameters work.
